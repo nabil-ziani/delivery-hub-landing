@@ -13,7 +13,7 @@ export const ThemeContext = createContext<ThemeContextProps>({
 })
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
