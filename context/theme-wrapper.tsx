@@ -1,10 +1,10 @@
 "use client"
 
-import { PropsWithChildren, useContext } from "react"
-import { ThemeContext } from "@/context/theme-context"
+import { PropsWithChildren } from "react"
+import { useTheme } from "@/context/theme-context"
 
 const ClientThemeWrapper = ({ children }: PropsWithChildren) => {
-    const { theme } = useContext(ThemeContext)
+    const { theme } = useTheme()
 
     return (
         <div data-theme={theme}>

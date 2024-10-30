@@ -1,10 +1,10 @@
 "use client"
 
-import { ChangeEvent, useContext } from 'react'
-import { ThemeContext } from '@/context/theme-context'
+import { ChangeEvent } from 'react'
+import { useTheme } from '@/context/theme-context'
 
 const ThemeController = () => {
-    const { applyTheme } = useContext(ThemeContext)
+    const { applyTheme } = useTheme()
 
     const handleThemeChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.checked) {

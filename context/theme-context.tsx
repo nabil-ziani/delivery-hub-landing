@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useState, useEffect, PropsWithChildren } from "react"
+import { createContext, useState, useEffect, PropsWithChildren, useContext } from "react"
 
 interface ThemeContextProps {
     theme: string
@@ -24,9 +24,9 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     }, [])
 
     if (!isMounted) return (
-        <>
+        <div className="flex h-screen justify-center items-center">
             Loading...
-        </>
+        </div>
     )
 
     const applyTheme = (theme: string) => {
@@ -39,5 +39,11 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
             {children}
         </ThemeContext.Provider>
     )
+}
 
+// Hook om te gebruiken in componenten
+export const useTheme = () => {
+    const context = useContext(ThemeContext)
+
+    return context
 }

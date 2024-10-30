@@ -3,7 +3,7 @@ import "./globals.css"
 
 import { poppins } from "@/app/fonts"
 import { ThemeProvider } from "@/context/theme-context";
-import ClientThemeWrapper from "@/context/client-theme-wrapper";
+import ClientThemeWrapper from "@/context/theme-wrapper";
 
 export const metadata: Metadata = {
   title: "Delivery Hub",
