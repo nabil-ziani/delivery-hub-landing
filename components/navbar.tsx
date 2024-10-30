@@ -1,3 +1,4 @@
+import LanguageController from "./language-controller"
 import Logo from "./logo"
 import ThemeController from "./theme-controller"
 
@@ -7,12 +8,12 @@ const Navbar = () => {
         <div className="navbar bg-base-100 px-4 sm:px-8 md:px-12">
             <div className="flex-1">
                 <Logo />
-                {/* <a className="btn btn-ghost text-xl">DeliveryHub</a> */}
             </div>
-            <div className="flex-none">
-                <button className="btn btn-square btn-ghost">
+            <div className="flex-none gap-2">
+                <button className="btn btn-square ">
                     <ThemeController />
                 </button>
+                <LanguageController />
             </div>
         </div>
     )
