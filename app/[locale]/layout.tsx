@@ -11,6 +11,7 @@ import { ThemeProvider } from "@/context/theme-context"
 
 import ClientThemeWrapper from "@/context/theme-wrapper"
 import Navbar from "@/components/navbar"
+import { Locale } from "@/types"
 
 export const metadata: Metadata = {
   title: "Delivery Hub",
@@ -21,7 +22,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
   const { locale } = await params
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound()
   }
 
